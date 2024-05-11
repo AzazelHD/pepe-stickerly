@@ -147,8 +147,10 @@ function App() {
                 onChange={(e) =>
                   handlePositionChange("x", parseInt(e.target.value))
                 }
-                min="0"
-                max="100"
+                min={-(stickerScale * stickerImage.width) / baseImage.width}
+                max={
+                  100 + (stickerScale * stickerImage.width) / baseImage.width
+                }
               />
             </div>
             <div className="flex items-center gap-2">
@@ -160,8 +162,10 @@ function App() {
                 onChange={(e) =>
                   handlePositionChange("y", parseInt(e.target.value))
                 }
-                min="0"
-                max="100"
+                min={-(stickerScale * stickerImage.height) / baseImage.height}
+                max={
+                  100 + (stickerScale * stickerImage.height) / baseImage.height
+                }
               />
             </div>
             <div className="flex items-center gap-2">
