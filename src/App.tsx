@@ -1,6 +1,5 @@
 import { useState, ChangeEvent, useRef, useEffect } from "react";
 import "./App.css";
-import { Canvas } from "konva/lib/Canvas";
 
 function App() {
   const [baseImage] = useState<HTMLImageElement>(new Image());
